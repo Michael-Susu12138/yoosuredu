@@ -1,0 +1,24 @@
+.sidebar {
+  position: fixed;
+  left: 10px; /* Adjust positioning as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f0f0f0; /* Adjust background color as needed */
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebar-text {
+  /* margin-left: 3px; */
+  font-size: 14px; /* Adjust font size as needed */
+  font-weight: bold;
+}

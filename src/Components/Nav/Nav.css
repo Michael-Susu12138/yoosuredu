@@ -1,0 +1,25 @@
+.custom-nav {
+  background-color: white !important;
+  border-bottom: none;
+  position: relative;
+}
+
+.search-form {
+  display: none; /* Hide the search bar */
+}
+
+.search-form .search-input {
+  border-radius: 0;
+  border: 1px solid #ccc;
+}
+
+.search-form .search-button {
+  border-radius: 0;
+  border: 1px solid #ccc;
+  color: #000;
+}
+
+.search-form .search-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}

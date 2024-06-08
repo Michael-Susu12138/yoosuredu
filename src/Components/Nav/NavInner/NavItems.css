@@ -1,0 +1,80 @@
+.nav-items {
+  position: relative;
+  flex-grow: 1;
+  margin-left: 50px; /* Adjust this value to increase space between the logo and nav items */
+}
+
+.nav-items::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px; /* Make the underline bolder */
+  background: linear-gradient(to left, black, rgba(0, 0, 0, 0));
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  gap: 50px; /* Increase spacing between nav items */
+}
+
+.nav-links .nav-link {
+  font-size: 20px;
+  font-weight: bold; /* Make nav items bold */
+  padding: 10px;
+  color: #000;
+}
+
+.nav-links .nav-link:hover {
+  color: #007bff;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  /* background-color: #ddd; Match background color */
+  border-radius: 25px; /* Rounded corners */
+  padding: 5px 10px;
+  border: 1px solid; /* Blue border */
+  width: 120px; /* Initial width */
+  transition: width 0.3s ease; /* Smooth transition */
+}
+.search-box.focused {
+  border: 1px solid #007bff;
+}
+/* .search-box.focused {
+  width: 300px; /* Expanded width on focus */
+
+.search-input {
+  border: none;
+  /* background-color: #ddd; Match background color */
+  border-radius: 25px;
+  padding: 5px 10px;
+  outline: none; /* Remove default outline */
+  margin-right: 5px; /* Space between input and button */
+  flex-grow: 1; /* Allow input to grow */
+  width: 100%;
+}
+
+.search-button {
+  /* background-color: #ddd; Match background color */
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 5px 10px; /* Adjust padding for better fit */
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  display: flex;
+  align-items: center;
+}
+
+.search-button:hover {
+  background-color: #bbb; /* Adjust hover color if needed */
+  color: #000;
+}
+.search-button img {
+  height: 15px;
+}

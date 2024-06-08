@@ -1,0 +1,12 @@
+.logo {
+  font-size: 36px; /* Increased font size for the logo */
+  font-weight: bold;
+  display: flex;
+  flex-direction: column; /* Place subtitle below the logo */
+  align-items: flex-start;
+}
+
+.logo-subtitle {
+  font-size: 24px; /* Increase the subtitle font size */
+  color: #666;
+}
