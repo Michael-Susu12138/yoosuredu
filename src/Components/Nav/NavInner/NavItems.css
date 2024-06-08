@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  background-color: #ddd; /* Match background color */
+  /* background-color: #ddd; Match background color */
   border-radius: 25px; /* Rounded corners */
   padding: 5px 10px;
   border: 1px solid #007bff; /* Blue border */
@@ -46,7 +46,7 @@
 
 .search-input {
   border: none;
-  background-color: #ddd;
+  /* background-color: #ddd; */
   /* Match background color */
   border-radius: 25px;
   padding: 5px 10px;
@@ -57,7 +57,7 @@
 }
 
 .search-button {
-  background-color: #ddd; /* Match background color */
+  /* background-color: #ddd; Match background color */
   border: none;
   color: #000;
   font-weight: bold;

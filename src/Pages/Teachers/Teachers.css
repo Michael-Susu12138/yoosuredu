@@ -1,0 +1,38 @@
+.teachers-page {
+  padding: 20px;
+}
+
+.teachers-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 2px solid black; /* Extend underline */
+  padding-bottom: 10px;
+}
+
+.teachers-filter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-select {
+  padding: 5px;
+  font-size: 16px; /* Increase font size */
+  font-weight: bold; /* Bold font */
+  border: none; /* Remove box outline */
+  background: none; /* Ensure no background */
+  cursor: pointer; /* Add pointer cursor */
+}
+
+.filter-select option {
+  font-size: 16px; /* Increase font size for options */
+  font-weight: normal; /* Options should have normal font weight */
+}
+
+.teachers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
