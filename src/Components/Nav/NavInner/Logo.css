@@ -9,4 +9,5 @@
 .logo-subtitle {
   font-size: 24px; /* Increase the subtitle font size */
   color: #666;
+  font-weight: bold;
 }
