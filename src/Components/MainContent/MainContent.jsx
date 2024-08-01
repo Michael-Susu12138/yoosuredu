@@ -2,8 +2,36 @@ import React from "react";
 import "./MainContent.css";
 import PatisserieComponent from "../PatisserieComponent/PatisserieComponent";
 import Slideshow from "../Slideshow/Slideshow";
+import News from "../News/News";
+import Gallery from "../Gallery/Gallery";
+import Channel from "../Channel/Channel";
+
+// import * as THREE from "three"; // Import Three.js
 
 const MainContent = () => {
+  //   const vantaRef = useRef(null);
+
+  //   useEffect(() => {
+  //     const loadVanta = async () => {
+  //       const VANTA = await import("vanta/dist/vanta.clouds.min"); // Dynamically import Vanta.js plugin
+
+  //       const vantaEffect = VANTA.CLOUDS({
+  //         el: vantaRef.current,
+  //         mouseControls: true,
+  //         touchControls: true,
+  //         gyroControls: false,
+  //         minHeight: 200.0,
+  //         minWidth: 200.0,
+  //         THREE: THREE, // Pass the imported Three.js instance
+  //       });
+
+  //       return () => {
+  //         if (vantaEffect) vantaEffect.destroy();
+  //       };
+  //     };
+
+  //     loadVanta();
+  //   }, []);
   return (
     <>
       <div className="hero">
@@ -39,6 +67,10 @@ const MainContent = () => {
           </div>
         </div>
 
+        <Channel />
+
+        <Gallery />
+        {/* 
         <h2>Dolor Sit</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -115,7 +147,9 @@ const MainContent = () => {
         <p>Feugiat in ante metus dictum at tempor commodo ullamcorper a...</p>
         <p>
           Dignissim enim sit amet venenatis urna cursus eget nunc scelerisque...
-        </p>
+        </p> */}
+
+        <News />
       </main>
     </>
   );

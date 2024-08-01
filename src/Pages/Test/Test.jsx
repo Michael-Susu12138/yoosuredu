@@ -1,9 +1,9 @@
 import React from "react";
 import "./Test.css";
-import Slideshow from "../../Components/Slideshow/Slideshow";
+import News from "../../Components/News/News";
 
 const Test = () => {
-  return <Slideshow />;
+  return <News />;
 };
 
 export default Test;
