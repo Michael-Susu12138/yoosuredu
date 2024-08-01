@@ -1,0 +1,109 @@
+/* ProgressBar.css */
+.flight-component {
+  --w: min(700px, 90vw); /* Adjusted width */
+  width: var(--w);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 1.25rem;
+  position: fixed; /* Changed to fixed for better control */
+  bottom: 1em; /* Added a small margin from the bottom */
+  left: 50%; /* Center the progress bar horizontally */
+  transform: translateX(-50%); /* Adjust to center */
+  background: #c2e5f9;
+  padding: 1em;
+  z-index: 1000;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; /* Rounded corners for the progress bar */
+}
+
+.flight-component input,
+input.flight {
+  --bg: #6c6c84;
+  --scale: clamp(
+    0.5,
+    calc(0.5 + 0.25 * sin(pi * var(--val) / 100)),
+    1.5
+  ); /* Reduced scale */
+  --shadow: clamp(
+    0.15em,
+    calc(0.5em * sin(pi * var(--val) / 100)),
+    0.5em
+  ); /* Adjusted shadow */
+  --opacity: clamp(0.2, calc(1 - sin(pi * var(--val) / 100)), 0.4);
+  --color: rgb(0 0 0 / var(--opacity));
+  --primary: #f0f4fc;
+  --secondary: #b55;
+  --val: 0;
+  --height: 2em; /* Reduced height for better visibility */
+  appearance: none;
+  container-type: inline-size;
+  flex: 1;
+  height: var(--height);
+  border: none; /* Firefox adds a default border */
+  border-radius: 10em;
+  position: relative;
+  background: radial-gradient(circle at 0.35em 50%, var(--bg) 0.35em, #0000 0)
+      no-repeat,
+    radial-gradient(
+        circle at calc(100% - 0.35em) 50%,
+        var(--bg) 0.35em,
+        #0000 0
+      )
+      no-repeat,
+    linear-gradient(#0000 45%, var(--bg) 0 55%, #0000 0) 50% 50% / 99% 100%,
+    #f000;
+  border: 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.flight-component input:before {
+  content: "";
+  width: calc(var(--val) * 1%);
+  min-width: 0.5em;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 0.35em 50%, #000 0.35em, #0000 0)
+      no-repeat,
+    linear-gradient(#0000 45%, #000 0 55%, #0000 0) 50% 50% / calc(100% - 1em)
+      100% no-repeat,
+    #f000;
+}
+
+.flight-component input:after {
+  content: "";
+  width: 100%;
+  height: 8em; /* Reduced height for the airplane */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  pointer-events: none;
+  background:
+      /* cloud 1 */ radial-gradient(
+      3% 20% at 50% 20%,
+      #fff 40%,
+      #0000 0
+    ),
+    radial-gradient(3% 20% at 52.5% 13%, #fff 40%, #0000 0),
+    radial-gradient(2% 20% at 51% 10%, #fff 40%, #0000 0),
+    radial-gradient(2.5% 20% at 51.5% 27%, #fff 50%, #0000 0),
+    radial-gradient(2% 20% at 53% 23%, #fff 60%, #0000 0),
+    radial-gradient(4% 40% at 55% 20%, #fff 40%, #0000 0),
+    /* cloud 2 */ radial-gradient(3% 20% at 40% 80%, #fff 40%, #0000 0),
+    radial-gradient(3% 20% at 42.5% 87%, #fff 40%, #0000 0),
+    radial-gradient(2% 20% at 41% 90%, #fff 40%, #0000 0),
+    radial-gradient(2.5% 20% at 41.5% 72%, #fff 50%, #0000 0),
+    radial-gradient(2% 20% at 43% 73%, #fff 60%, #0000 0),
+    radial-gradient(4% 40% at 40% 78%, #fff 40%, #0000 0);
+  background-size: 300% 100%;
+  background-position: calc(var(--val) * 1%) 0;
+  -webkit-mask: linear-gradient(90deg, #0000, #0008 35% 65%, #0000);
+  mask: linear-gradient(90deg, #0000, #0008 35% 65%, #0000);
+}

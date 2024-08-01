@@ -1,0 +1,31 @@
+.featured-section {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.featured-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.featured-info {
+  flex-grow: 1;
+}
+
+.featured-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.featured-description {
+  font-size: 16px;
+  color: #666;
+}
