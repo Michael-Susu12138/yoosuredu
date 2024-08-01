@@ -1,5 +1,7 @@
 import React from "react";
 import "./MainContent.css";
+import PatisserieComponent from "../PatisserieComponent/PatisserieComponent";
+import Slideshow from "../Slideshow/Slideshow";
 
 const MainContent = () => {
   return (
@@ -21,7 +23,22 @@ const MainContent = () => {
       </nav>
 
       <main>
-        <p className="notice">(no love in firefox)</p>
+        <Slideshow></Slideshow>
+        <div className="patisserie-section">
+          <PatisserieComponent />
+          <div className="patisserie-description">
+            <h2>Meet our Team</h2>
+            <p>
+              At Yoosuredu, all of our teachers are coming from prestigous
+              university around the work.
+            </p>
+
+            <button className="button-62" role="button">
+              Learn More
+            </button>
+          </div>
+        </div>
+
         <h2>Dolor Sit</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

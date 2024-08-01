@@ -8,6 +8,52 @@ body {
   color: #f9f6ef;
 }
 
+/* MainContent.css */
+
+.patisserie-section {
+  display: flex;
+  align-items: flex-start; /* Align the stack and content to the top */
+  justify-content: space-between;
+  gap: 2rem; /* Space between the stack and the description */
+  /* margin-bottom: 2rem; Space below the stack section */
+  margin-top: 100px;
+}
+
+.patisserie-description {
+  flex: 1; /* Take up remaining space next to the stack */
+  color: #555; /* Adjust text color */
+  font-size: 1.2rem; /* Adjust font size for readability */
+  line-height: 1.6; /* Increase line height for better readability */
+  margin-top: 100px;
+  margin-left: 2rem; /* Create space between the stack and the description */
+}
+
+.patisserie-component .stack {
+  flex-shrink: 0; /* Prevent the stack from shrinking */
+  width: 350px; /* Adjust width of the stack */
+  height: 500px; /* Adjust height of the stack */
+  margin-right: 2rem; /* Add space to the right of the stack */
+}
+
+@media (max-width: 768px) {
+  .patisserie-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .patisserie-component .stack {
+    width: 300px; /* Adjust stack size for smaller screens */
+    height: 400px;
+    margin-right: 0; /* Remove margin on smaller screens */
+  }
+
+  .patisserie-description {
+    text-align: center;
+    margin-left: 0; /* Remove margin on smaller screens */
+    /* margin-top: 1rem; Add space above the description */
+  }
+}
+
 .playwrite-ar-uniquehero {
   font-family: "Playwrite AR", cursive;
   font-optical-sizing: auto;
@@ -27,6 +73,11 @@ main {
   padding-inline: 1.5em; /* Increased padding */
 }
 
+main {
+  color: black;
+  margin-top: 200px;
+}
+
 h1,
 h2,
 h3 {
@@ -35,8 +86,45 @@ h3 {
 }
 
 p {
+  margin-top: 20px;
   text-wrap: pretty;
   line-height: 1.75; /* Increased line-height for better readability */
+}
+
+.button-62 {
+  background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  margin-top: 150px;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
 .hero {
@@ -69,6 +157,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0;
+  z-index: 10;
 }
 
 nav ul {
@@ -79,6 +168,7 @@ nav ul {
 }
 
 nav ul li {
+  color: white;
   list-style: none;
   display: inline-block;
   cursor: pointer;
@@ -116,7 +206,7 @@ nav:after {
 
 .logo {
   font-weight: 900;
-  font-size: 12cqi; /* Increased font-size for the logo */
+  font-size: 8cqi; /* Increased font-size for the logo */
   /* background: linear-gradient(
     45deg,
     hsl(0, 100%, 70%),
@@ -147,10 +237,6 @@ nav:after {
   );
   background-clip: text;
   color: #0000;
-}
-
-.notice:after {
-  content: " animation-timeline of scroll and view are currently not supported in your browser.";
 }
 
 @supports (animation-timeline: view()) {
